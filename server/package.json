@@ -4,7 +4,7 @@
     "start": "node dist/index.js",
     "dev": "tsx watch --clear-screen=false ./index.ts",
     "drizzle:generate": "drizzle-kit generate",
-    "drizzle:regenerate": "rm -rf ./drizzle && rm database.db && pnpm drizzle:generate && pnpm drizzle:migrate && pnpm drizzle:seed",
+    "drizzle:regenerate": "rmdir /s /q drizzle && del /f /q database.db && call pnpm drizzle:generate && call pnpm drizzle:migrate && call pnpm drizzle:seed",
     "drizzle:migrate": "drizzle-kit migrate",
     "drizzle:seed": "tsx ./database/seed.ts"
   },
